@@ -21,17 +21,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-document.querySelector("#submitBtn").addEventListener("click", function (e) {
-    e.preventDefault();
-    var el = document.getElementsByName('answer');
-    for(let i = 0; i < el.length; i++) {
-        if(el[i].checked){
-            console.log(el[i].value);
-        }
-             
-    }
-})
-
 //Add to firebase
 // async function addName(){
 //     var fname = readInput("fname");

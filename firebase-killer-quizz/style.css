@@ -19,14 +19,14 @@ body{
  flex-direction: column;
  justify-content: center;
  align-items: center;
- gap:7px;
+ gap:10px;
 }
 
 .question{
  margin-bottom: 20px;
 }
 
-#submitBtn{
+#nextBtn{
     padding: 5px;
     font-size: 18px;
     border-radius: 10px;
