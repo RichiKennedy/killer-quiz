@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
+    <!-- Css links -->
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="./media.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section class="first-page">
+        <div class="button1">
+            <button onclick="displayModal()" id="btn-firstpage"> Press me </button>
+        </div>
+        <video id="background-video" autoplay loop muted poster="./mp4/killer1-video.mp4">
+            <source src="./mp4/killer1-video.mp4" type="video/mp4">
+        </video>
+
+    </section>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="question">
+                <strong>Q. Someone accidentally bumps into you on the street, what would be your reaction?</strong>
+            </div>
+            <div class="quiz" id="options">
+                <label class="options">Yell out"What's your problem!?"
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="options">Roll your eyes at them
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="options">Shove them back
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="options">Do nothing
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </div>
+        <div class="btn3">
+            <div id="prev">
+                <button class="btn btn-primary">Previous</button>
+            </div>
+            <div class="success">
+                <button class="btn btn-success">Next</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
