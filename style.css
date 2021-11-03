@@ -1,4 +1,4 @@
-
+/* 
  * {
     margin: 0;
     padding: 0;
@@ -32,7 +32,6 @@ body {
 }
 
 #btn-firstpage {
-    /* background-color: rgba(234, 234, 236, 0.048); */
     background-color:rgba(0,0,0,8);
     cursor: pointer;
     position: absolute;
@@ -188,3 +187,82 @@ body {
     padding: 0 10px;
 
 }
+
+ */
+
+
+* {
+    height:100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    height:100%;
+    width:100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    z-index: 0;
+    /* background:linear-gradient(45deg,red,blue,green); */
+}
+
+.first-page {
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(247, 68, 68);
+    display: flex;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.button1 {
+    display: flex;
+    position: absolute;
+    margin: auto;
+    top: 30vw;
+    left: 42vw;
+    z-index: 2;
+}
+.button1>button {
+    font-size: 2.2vw;
+    font-family: 'Coming Soon', cursive;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: rgb(92, 5, 5);
+    padding: 10px;
+    border-radius: 30%;
+    z-index: 3;
+    height: 50px;
+}
+
+.button1>button:hover {
+    background-color:honeydew;
+    border: 1px solid;
+    cursor:pointer;
+}
+
+
+
+
+
+
+#background-video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: initial;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-repeat: repeat;
+    background-size: cover;
+} 
