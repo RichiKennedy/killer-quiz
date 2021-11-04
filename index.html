@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Quizz</title>
+</head>
+<body>
+    <form class="quizzForm "> 
+        <h4 class= "question"></h4> <!--load question dinamically here -->
+        
+        <div class="answer">
+            <input type="radio" id="a1" name="answer" value="answer 1">
+            <!--load answer dinamically in the label here -->
+            <label for="a1" class="answer1">text here </label> 
+        </div>
+        <div class="answer">
+            <input type="radio" id="a2" name="answer" value="answer 2">
+             <!--load answer dinamically in the label here -->
+            <label for="a2" class="answer2"></label>
+        </div>
+        <div class="answer">
+            <input type="radio" id="a3" name="answer" value="answer 3">
+            <!--load answer dinamically in the label here -->
+            <label for="a3" class="answer3"></label>
+        </div>
+        <div class="answer">
+            <input type="radio" id="a4" name="answer" value="answer 4">
+            <!--load answer dinamically in the label here -->
+            <label for="a4" class="answer4"></label>
+        </div>
+        
+        <div class="controlBtns">
+            <div class="inputName disabled">
+                <label for="name">Enter your name:</label>
+                <input type="text" id="name" name="name" required minlength="4" maxlength="12" size="18">
+            </div>
+
+            <input type="submit" value="Show Results" id="results" class="disabled">
+            <input type="submit" value="Next" id="nextBtn" >
+        </div>
+        
+    </form>
+
+    <div class="resultContainer disabled">
+        <div class="img">
+            <!-- <img src="https://source.unsplash.com/random/650x300" alt=""> -->
+            <img src="./img/1.gif" alt="">
+        </div>
+        
+        <h3 class="resultHeader">Result description here</h3>
+        <p class="resultParagraph ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ab, nam eius modi provident officiis molestiae blanditiis excepturi similique veritatis aspernatur ducimus ut quas ipsa. Voluptatum, dignissimos! Repellendus, quia exercitationem.</p>
+      
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js" type="module"></script>
+    
+    <script src="./app.js" type="module"></script>
+</body>
+</html>

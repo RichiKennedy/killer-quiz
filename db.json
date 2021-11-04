@@ -1,0 +1,93 @@
+[ 
+    {
+       "question":"1.Someone accidentally bumps into you on the street, what would be your reaction?",
+       "answers":[
+          "Do nothing.",
+          "Roll your eyes at them.",
+          "Well 'What's your problem?'.",
+          "Shove them back."
+       ]
+    },
+    {
+       "question":"2.Would you potentially kill your enemy if you could get away with it?",
+       "answers":[
+          "No way! That's just wrong.",
+          "I'd fantasize about it.",
+          "Potentially...",
+          "YES."
+       ]
+    },
+    {
+       "question":"3.You're sitting on the pavement when a line of ants comes towards you, what do you do?",
+       "answers":[
+          "You move out of the way so they can get safely to their hill.",
+          "You do nothing.",
+          "You dump water on them just for fun.",
+          "You squish them."
+       ]
+    },
+    {
+       "question":"4.What's your opinion on fire?",
+       "answers":[
+          "I know better not to go near it.",
+          "I'm afraid of it.",
+          "I'm fascinated by it.",
+          "I'm neutral about it."
+       ]
+    },
+    {
+       "question":"5.How often do you socialize?",
+       "answers":[
+          "Maybe once a week.",
+          "Never, I'm a loner.",
+          "All the time! Almost every day.",
+          "Maybe a few times a week."
+       ]
+    },
+    {
+       "question":"6.How many hours per day do you spend on the computer?",
+       "answers":[
+          "4-5.",
+          "6+.",
+          "0-1.",
+          "2-3."
+       ]
+    },
+    {
+       "question":"7.Your kitchen sink is clogged, what do you do?",
+       "answers":[
+          "I'm the only one around here who can do this job.",
+          "Not a pretty job but maybe i'll find some cool thing for my jar collection.",
+          "No need for gloves I love the squishy feeling.",
+          "Convince someone else to do it."
+       ]
+    },
+    {
+       "question":"8.Have you ever used physical violence on another human because you were angry?",
+       "answers":[
+          "No, never.",
+          "Maybe when I was a kid.",
+          "Only when justified.",
+          "Yes."
+       ]
+    },
+    {
+       "question":"9.If you had to kill someone, what weapon would you use?",
+       "answers":[
+          "Poison.",
+          "A gun.",
+          "A knife.",
+          "A chainsaw."
+       ]
+    },
+    {
+       "question":"10.Lorem ipsum, dolor sit amet consectetur adipisicing?",
+       "answers":[
+          "Lorem ipsum, dolor sit amet consectetur adipisicing37.",
+          "Lorem ipsum, dolor sit amet consectetur adipisicing38.",
+          "Lorem ipsum, dolor sit amet consectetur adipisicing39.",
+          "Lorem ipsum, dolor sit amet consectetur adipisicing40."
+       ]
+    }
+ ]
+
