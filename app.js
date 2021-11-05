@@ -1,3 +1,5 @@
+// first page with a button in the center and a description of the quizz
+
 // fetch data from json file using an async/await function
 // make function2 that uses the data we get from JSON;  so make a function where you can access from within this function the data we got in our previous function
 //function2 should now access question and its answers of any object in our JSON array example data[0].question or data[0].answers[3]
@@ -10,6 +12,18 @@
 //when we finish answering our questions(get to our last question) have our form disapear and have instead a section with an input field and a show results button
 //store user input and score in firebase
 //when we click on show results it our previous section disapears and we now show a header paragraph and image with text and image based on the category our score is in
+
+
+//on click of the button we get sent to our form
+const startBtn = document.querySelector(".startBtn");
+const firstPage= document.querySelector(".first-page");
+const secondPage= document.querySelector(".page-two");
+startBtn.addEventListener("click", ()=>{
+    console.log("change page");
+    firstPage.classList.toggle("disabled");
+    // secondPage.classList.toggle("disabled");
+    secondPage.classList.toggle("button-active");
+});
 
 // fetch data from json file
 async function getQuizData() {
