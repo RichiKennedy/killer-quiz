@@ -5,8 +5,6 @@
 //function2 should now access question and its answers of any object in our JSON array example data[0].question or data[0].answers[3]
 // inside function2 we should be able to change the innerHTML of our question/answer field  with the previously accessed data
 //the submit button of the form should be labled Next and trigger the next question and answers to be populated
-
-
 //hardcode points to our answers example annswer1=1p;annswer2=2p;annswer3=3p; then create a variable that keeps score. how? maybe use an if clause // if answer that is checked has a class of answer1 add 1p to the score
 //*create result categories and check score to see which category our score fits into
 //when we finish answering our questions(get to our last question) have our form disapear and have instead a section with an input field and a show results button
@@ -18,10 +16,9 @@
 const startBtn = document.querySelector(".startBtn");
 const firstPage= document.querySelector(".first-page");
 const secondPage= document.querySelector(".page-two");
+
 startBtn.addEventListener("click", ()=>{
-    console.log("change page");
     firstPage.classList.toggle("disabled");
-    // secondPage.classList.toggle("disabled");
     secondPage.classList.toggle("button-active");
 });
 
@@ -66,12 +63,15 @@ assignQandA();
         if(index<10){
             index++;
 
-            document.querySelector(".question").innerHTML=quizData[index].question;
-            document.querySelector(".answer1").innerHTML=quizData[index].answers[0];
+            document.querySelector(".question").innerHTML= `quizData[index].question 
+            <input type="radio" checked="checked" id="a1" name="answer"  value="answer 1">
+            <span class="checkmark"></span>`;
+            document.querySelector(".answer1").innerText=quizData[index].answers[0];
             document.querySelector(".answer2").innerHTML=quizData[index].answers[1];
             document.querySelector(".answer3").innerHTML=quizData[index].answers[2];
             document.querySelector(".answer4").innerHTML=quizData[index].answers[3];
-           
+           `text <input type="radio" checked="checked" name="radio">
+           <span class="checkmark"></span>`
             if(index == 9){ 
                 
                 checkAnswer();
@@ -81,7 +81,7 @@ assignQandA();
                 document.querySelector("#nextBtn").innerHTML="Submit"; 
                 document.querySelector("#nextBtn").classList.add("disabled");
                 document.querySelector(".inputName").classList.remove("disabled");
-                document.querySelector("#results").classList.remove("disabled");
+                document.querySelector("#resultBtn").classList.remove("disabled");
                 
                 // console.log("end of quiz", score);
             }// hmmmm not sure why it doesn't work
@@ -178,15 +178,17 @@ async function storeInDb(score, username){
 
 let userInput = document.querySelector("#name");
 
+// on click of show results the user name input and the score  will be stored in firebase and then our form is disabled and our result box is enabled where based on the score we get 1 of 4 results
 async function showResults(){
     
-    document.querySelector("#results").addEventListener("click", (e)=>{
+    document.querySelector("#resultBtn").addEventListener("click", (e)=>{
         e.preventDefault();      
         storeInDb(score, userInput.value);
         document.querySelector(".quizzForm").classList.add("disabled");
         document.querySelector(".resultContainer").classList.remove("disabled");
         // here show answer box based on score no
         showResultCategory(score);
+        // here we can have our btn for our lederboard
     });
 }
 showResults();
@@ -250,20 +252,44 @@ function showResultCategory(score) {
         resultImg.innerHTML=`<img src="./img/1.gif" alt="">`;
         resultHeader.innerHTML = resultCategories[0].title;
         resultParagraph.innerHTML = resultCategories[0].description;
-        console.log("category 1");
+        
     }else if( score > 10 && score <= 20){
         resultImg.innerHTML=`<img src="./img/2.gif" alt="">`;
         resultHeader.innerHTML = resultCategories[1].title;
         resultParagraph.innerHTML = resultCategories[1].description;
-        console.log("category 2");
+        
     }else if( score > 20 && score <= 30){
         resultImg.innerHTML=`<img src="./img/3.gif" alt="">`;
         resultHeader.innerHTML = resultCategories[2].title;
         resultParagraph.innerHTML = resultCategories[2].description;
-        console.log("category 3");
+        
     }else if( score > 10 && score <= 40){
         resultImg.innerHTML=`<img src="./img/4.gif" alt="">`;
         resultHeader.innerHTML = resultCategories[3].title;
         resultParagraph.innerHTML = resultCategories[3].description;
-        console.log("category 4")};
+        };
+}
+
+// grab the lederboard button and on click display scores from previous users taken from firebase
+
+var modal = document.getElementById("myModal");
+let lederboardBtn = document.querySelector(".lederboard");
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+lederboardBtn.addEventListener("click", () =>{
+    modal.style.display = "block";
+    console.log("show list here");
+});
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }

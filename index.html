@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
 
     <title>Quizz</title>
 </head>
@@ -22,27 +23,62 @@
     </section>
 
     <section class="page-two">
+        <!-- modal btn that triggers lederboard modal -->
+        <button class="lederboard">Score lederboard</button>
+        <!-- lederboard modal -->
+        <div id="myModal" class="modalBackground">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <ul class="lederboard-list">
+                  <li class="leaderboard-list-item">Username:Lorem Score: 23</li>
+                  <li class="leaderboard-list-item">Username:Lorem Score: 23</li>
+                  <li class="leaderboard-list-item">Username:Lorem Score: 23</li>
+                  <li class="leaderboard-list-item">Username:Lorem Score: 23</li>
+                  <li class="leaderboard-list-item">Username:Lorem Score: 23</li>
+                  <li class="leaderboard-list-item">Username:Lorem Score: 23</li>
+                  <li class="leaderboard-list-item">Username:Lorem Score: 23</li>
+                  <li class="leaderboard-list-item">Username:Lorem Score: 23</li>
+              </ul>
+            </div>
+          
+        </div>
+        
         <form class="quizzForm "> 
             <h4 class= "question"></h4> <!--load question dinamically here -->
+
+            <!-- <label for="a1" class="answer answer1">
+                <input type="radio" checked="checked" id="a1" name="answer"  value="answer 1">
+                <span class="checkmark"></span>
+            </label>
+            <label for="a2" class="answer answer2">
+                <input type="radio" checked="checked" id="a2" name="answer"  value="answer 2">
+                <span class="checkmark"></span>
+            </label>
+            <label for="a3" class="answer answer3">
+                <input type="radio" checked="checked" id="a3" name="answer"  value="answer 3">
+                <span class="checkmark"></span>
+            </label>
+            <label for="a4" class="answer answer4">
+                <input type="radio" checked="checked" id="a4" name="answer"  value="answer 4">
+                <span class="checkmark"></span>
+            </label> -->
             
             <div class="answer">
                 <input type="radio" id="a1" name="answer" value="answer 1">
-                <!--load answer dinamically in the label here -->
-                <label for="a1" class="answer1">text here </label> 
+                <label for="a1" class="answer1"></label> 
             </div>
             <div class="answer">
                 <input type="radio" id="a2" name="answer" value="answer 2">
-                 <!--load answer dinamically in the label here -->
                 <label for="a2" class="answer2"></label>
             </div>
             <div class="answer">
                 <input type="radio" id="a3" name="answer" value="answer 3">
-                <!--load answer dinamically in the label here -->
                 <label for="a3" class="answer3"></label>
             </div>
             <div class="answer">
                 <input type="radio" id="a4" name="answer" value="answer 4">
-                <!--load answer dinamically in the label here -->
                 <label for="a4" class="answer4"></label>
             </div>
             
@@ -52,7 +88,7 @@
                     <input type="text" id="name" name="name" required minlength="4" maxlength="12" size="18">
                 </div>
     
-                <input type="submit" value="Show Results" id="results" class="disabled">
+                <input type="submit" value="Show Results" id="resultBtn" class="disabled">
                 <input type="submit" value="Next" id="nextBtn" >
             </div>
             
