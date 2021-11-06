@@ -63,15 +63,12 @@ assignQandA();
         if(index<10){
             index++;
 
-            document.querySelector(".question").innerHTML= `quizData[index].question 
-            <input type="radio" checked="checked" id="a1" name="answer"  value="answer 1">
-            <span class="checkmark"></span>`;
+            document.querySelector(".question").innerHTML= quizData[index].question;
             document.querySelector(".answer1").innerText=quizData[index].answers[0];
             document.querySelector(".answer2").innerHTML=quizData[index].answers[1];
             document.querySelector(".answer3").innerHTML=quizData[index].answers[2];
             document.querySelector(".answer4").innerHTML=quizData[index].answers[3];
-           `text <input type="radio" checked="checked" name="radio">
-           <span class="checkmark"></span>`
+           
             if(index == 9){ 
                 
                 checkAnswer();
@@ -83,9 +80,8 @@ assignQandA();
                 document.querySelector(".inputName").classList.remove("disabled");
                 document.querySelector("#resultBtn").classList.remove("disabled");
                 
-                // console.log("end of quiz", score);
-            }// hmmmm not sure why it doesn't work
-        //    console.log("last score:",score);
+            }
+        
         };
         
         // if we get to Q10 change the next btn to show reuslt and add an input field for name above it
