@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+
+    <title>Quizz</title>
+</head>
+<body>
+
+    <section class="first-page">
+        <div class="intro">
+            <h3 class="intro_header">Could you be a serial killer? Find out by answering a few questions.</h3>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam exercitationem possimus aliquid at illum aliquam, magni alias. Ducimus sequi quae quibusdam sunt ad saepe deserunt maxime modi, doloremque iusto nam ipsum, consectetur molestiae mollitia asperiores minima cumque velit eius. Sed laborum voluptates voluptatum nihil nesciunt quia doloremque rerum. Veritatis, sint!
+            </p> -->
+        </div>
+        <div class="startBtn">
+            <button> Press me</button>
+        </div>
+    </section>
+
+    <section class="page-two">
+        <!-- modal btn that triggers leaderboard modal -->
+        <button class="leaderboardBtn">Score leaderboard</button>
+        <!-- leaderboard modal -->
+        <div id="leaderboardModal" class="modalBackground">
+  
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <!-- list populated by name and score fetched from firebase -->
+              <ul class="leaderboard-list">
+                  <li class="leaderboard-list-item">Name: &nbsp Score: </li>
+                  
+              </ul>
+            </div>
+          
+        </div>
+        
+        <form class="quizzForm "> 
+            <h4 class= "question"></h4> <!--load question dinamically here -->
+
+            <!-- <label for="a1" class="answer answer1">
+                <input type="radio" checked="checked" id="a1" name="answer"  value="answer 1">
+                <span class="checkmark"></span>
+            </label>
+            <label for="a2" class="answer answer2">
+                <input type="radio" checked="checked" id="a2" name="answer"  value="answer 2">
+                <span class="checkmark"></span>
+            </label>
+            <label for="a3" class="answer answer3">
+                <input type="radio" checked="checked" id="a3" name="answer"  value="answer 3">
+                <span class="checkmark"></span>
+            </label>
+            <label for="a4" class="answer answer4">
+                <input type="radio" checked="checked" id="a4" name="answer"  value="answer 4">
+                <span class="checkmark"></span>
+            </label> -->
+            
+            <div class="answer">
+                <input type="radio" id="a1" name="answer" value="answer 1">
+                <label for="a1" class="answer1"></label> 
+            </div>
+            <div class="answer">
+                <input type="radio" id="a2" name="answer" value="answer 2">
+                <label for="a2" class="answer2"></label>
+            </div>
+            <div class="answer">
+                <input type="radio" id="a3" name="answer" value="answer 3">
+                <label for="a3" class="answer3"></label>
+            </div>
+            <div class="answer">
+                <input type="radio" id="a4" name="answer" value="answer 4">
+                <label for="a4" class="answer4"></label>
+            </div>
+            
+            <div class="controlBtns">
+                <div class="inputName disabled">
+                    <label for="name">Enter your name:</label>
+                    <input type="text" id="name" name="name" required minlength="4" maxlength="12" size="18">
+                </div>
+    
+                <input type="submit" value="Show Results" id="resultBtn" class="disabled">
+                <input type="submit" value="Next" id="nextBtn" >
+            </div>
+            
+        </form>
+    
+        <div class="resultContainer disabled">
+            <div class="img">
+                <!-- <img src="https://source.unsplash.com/random/650x300" alt=""> -->
+                <img src="./img/1.gif" alt="">
+            </div>
+            
+            <h3 class="resultHeader">Result description here</h3>
+            <p class="resultParagraph ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ab, nam eius modi provident officiis molestiae blanditiis excepturi similique veritatis aspernatur ducimus ut quas ipsa. Voluptatum, dignissimos! Repellendus, quia exercitationem.</p>
+          
+        </div>
+    </section>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js" type="module"></script>
+    
+    <script src="./app.js" type="module"></script>
+</body>
+</html>
