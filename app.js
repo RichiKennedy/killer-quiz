@@ -1,5 +1,4 @@
 // first page with a button in the center and a description of the quizz
-
 // fetch data from json file using an async/await function
 // make function2 that uses the data we get from JSON;  so make a function where you can access from within this function the data we got in our previous function
 //function2 should now access question and its answers of any object in our JSON array example data[0].question or data[0].answers[3]
@@ -144,6 +143,9 @@ import {
   doc,
   deleteDoc,
   getDocs,
+  query, 
+  orderBy, 
+  limit
 } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -160,17 +162,18 @@ const db = getFirestore(app);
 
 // end firebase config stuff
 
-async function storeInDb(score, username){
-    if (!score && !userInput.value) return null;
+async function storeInDb(name, score){
+    if ( !userInput.value && !score) return null;
       try {
-        const docRef = await addDoc(collection(db, "scores"), {
-            score: score,
-            username: username
+        const docRef = await addDoc(collection(db, "scores"), {   
+            name: name,
+            score: score
         });
       } catch (e) {
         console.error("Error adding document: ", e);
       }
-  }
+};
+
 
 let userInput = document.querySelector("#name");
 
@@ -179,37 +182,16 @@ async function showResults(){
     
     document.querySelector("#resultBtn").addEventListener("click", (e)=>{
         e.preventDefault();      
-        storeInDb(score, userInput.value);
+        storeInDb(userInput.value, score);
         document.querySelector(".quizzForm").classList.add("disabled");
         document.querySelector(".resultContainer").classList.remove("disabled");
         // here show answer box based on score no
         showResultCategory(score);
         // here we can have our btn for our lederboard
+        // getScores();
     });
 }
 showResults();
-
-// create our result categories
-// make an array of obj i can grab
-// cat 1  up to 10p or less
-    //img1 
-    //h3: "Norman Bates"
-    //p: "You're kind and thoughtfull , but everyone has it's limits. you're always one bad day away from stabbing your mom and wearing her clothes around the house. Advice? try meditation. "
-
-// cat 2 between 11 and 20p
-    //img2 
-    //h3: "Jeffrey Dahmer"
-    //p: "You are a loner and enjoy many hobbies but go through a bad breakup or get drunkenly rejected and you too can start your very own collection of pickled people "
-
-// cat 3 between 21 and 30p
-    //img3 
-    //h3: "Charles Manson"
-    //p: "You are the life of the party, charming and with a great sense of humour, but if your ego goes unchecked you're one friend away from starting your own death cult. "
-
-// cat 4 between 31 and 40p
-    //img4 
-    //h3: "Patrick Bateman"
-    //p: "You are ambitous, charming and take great pride in your apearance but if you don't learn to take yourself less seriously you're one poorly chosen font style away from giving your work mate an axe haircut."
 
 let resultCategories =[
     {
@@ -266,24 +248,40 @@ function showResultCategory(score) {
         };
 }
 
-// grab the lederboard button and on click display scores from previous users taken from firebase
+//Get all score/usernames from firebase then populate leaderboard field
+let leaderboardList = document.querySelector(".leaderboard-list");
 
-var modal = document.getElementById("myModal");
-let lederboardBtn = document.querySelector(".lederboard");
+// const q = query(scores, orderBy("score"), limit(3));
+
+async function getScores() {
+    const querySnapshot = await getDocs(collection(db, "scores"));
+     querySnapshot.forEach((doc) => {
+     leaderboardList.innerHTML += `<li class="leaderboard-list-item"> ${doc.data().name} &nbsp &nbsp ${doc.data().score}</li>`
+     console.log(doc.id, " => ", doc.data());
+     });
+};
+
+getScores();
+
+
+// grab the leaderboard button and on click display scores from previous users taken from firebase
+
+var modal = document.querySelector("#leaderboardModal");
+let leaderboardBtn = document.querySelector(".leaderboardBtn");
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-lederboardBtn.addEventListener("click", () =>{
+
+leaderboardBtn.addEventListener("click", () =>{
     modal.style.display = "block";
-    console.log("show list here");
+    
 });
 
-// When the user clicks on <span> (x), close the modal
+
 span.onclick = function() {
     modal.style.display = "none";
   }
 
-// When the user clicks anywhere outside of the modal, close it
+
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";

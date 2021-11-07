@@ -117,40 +117,38 @@ body {
   border-radius: 5px;
 }
 
-.page-two .quizzForm .controlBtns #resultBtn {
+.page-two .quizzForm .controlBtns #resultBtn, .page-two .quizzForm .controlBtns #nextBtn {
   padding: 2px 15px;
   font-size: 18px;
   border-radius: 10px;
 }
 
-.page-two .quizzForm .controlBtns #nextBtn {
-  padding: 2px 15px;
-  font-size: 18px;
-  border-radius: 10px;
-}
-
-.page-two .quizzForm .resultContainer {
+.page-two .resultContainer {
   border: 2px solid pink;
   padding: 20px;
   margin: 20vh auto;
   max-width: 600px;
 }
 
-.page-two .quizzForm .resultContainer h3 {
+.page-two .resultContainer h3 {
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
   font-size: 25px;
 }
 
-.page-two .quizzForm .resultContainer p {
+.page-two .resultContainer p {
   font-size: 20px;
 }
 
-.page-two .quizzForm .resultContainer .img img {
+.page-two img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.disabled {
+  display: none;
 }
 
 .button-active {
@@ -160,10 +158,6 @@ body {
   transition: -webkit-transform 1.5s ease;
   transition: transform 1.5s ease;
   transition: transform 1.5s ease, -webkit-transform 1.5s ease;
-}
-
-.disabled {
-  display: none;
 }
 
 .modalBackground {
@@ -220,5 +214,3 @@ body {
 .modalBackground .modal-content .lederboard-list {
   list-style: none;
 }
-
-/* The container */

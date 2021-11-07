@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
 
     <title>Quizz</title>
 </head>
@@ -14,8 +14,8 @@
     <section class="first-page">
         <div class="intro">
             <h3 class="intro_header">Could you be a serial killer? Find out by answering a few questions.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam exercitationem possimus aliquid at illum aliquam, magni alias. Ducimus sequi quae quibusdam sunt ad saepe deserunt maxime modi, doloremque iusto nam ipsum, consectetur molestiae mollitia asperiores minima cumque velit eius. Sed laborum voluptates voluptatum nihil nesciunt quia doloremque rerum. Veritatis, sint!
-            </p>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam exercitationem possimus aliquid at illum aliquam, magni alias. Ducimus sequi quae quibusdam sunt ad saepe deserunt maxime modi, doloremque iusto nam ipsum, consectetur molestiae mollitia asperiores minima cumque velit eius. Sed laborum voluptates voluptatum nihil nesciunt quia doloremque rerum. Veritatis, sint!
+            </p> -->
         </div>
         <div class="startBtn">
             <button> Press me</button>
@@ -23,23 +23,17 @@
     </section>
 
     <section class="page-two">
-        <!-- modal btn that triggers lederboard modal -->
-        <button class="lederboard">Score lederboard</button>
-        <!-- lederboard modal -->
-        <div id="myModal" class="modalBackground">
-
-            <!-- Modal content -->
+        <!-- modal btn that triggers leaderboard modal -->
+        <button class="leaderboardBtn">Score leaderboard</button>
+        <!-- leaderboard modal -->
+        <div id="leaderboardModal" class="modalBackground">
+  
             <div class="modal-content">
               <span class="close">&times;</span>
-              <ul class="lederboard-list">
-                  <li class="leaderboard-list-item">Username:Lorem Score: 23</li>
-                  <li class="leaderboard-list-item">Username:Lorem Score: 23</li>
-                  <li class="leaderboard-list-item">Username:Lorem Score: 23</li>
-                  <li class="leaderboard-list-item">Username:Lorem Score: 23</li>
-                  <li class="leaderboard-list-item">Username:Lorem Score: 23</li>
-                  <li class="leaderboard-list-item">Username:Lorem Score: 23</li>
-                  <li class="leaderboard-list-item">Username:Lorem Score: 23</li>
-                  <li class="leaderboard-list-item">Username:Lorem Score: 23</li>
+              <!-- list populated by name and score fetched from firebase -->
+              <ul class="leaderboard-list">
+                  <li class="leaderboard-list-item">Name: &nbsp Score: </li>
+                  
               </ul>
             </div>
           
