@@ -15,10 +15,13 @@
 const startBtn = document.querySelector(".startBtn");
 const firstPage= document.querySelector(".first-page");
 const secondPage= document.querySelector(".page-two");
+const audio1 = document.getElementById("myAudio1");
 
 startBtn.addEventListener("click", ()=>{
     firstPage.classList.toggle("disabled");
     secondPage.classList.toggle("button-active");
+    // audio for starting quiz
+        audio1.play();
 });
 
 // fetch data from json file
@@ -58,6 +61,9 @@ assignQandA();
  function nextButton(index, quizData){
     document.querySelector("#nextBtn").addEventListener("click", (e) =>{
         e.preventDefault(); // prevents form from redfreshing (default action)
+        
+        var audio = document.getElementById("myAudio");
+        audio.play();
         
         if(index<10){
             index++;

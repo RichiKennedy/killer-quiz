@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('http://fonts.cdnfonts.com/css/dinobots');
 *{
   margin: 0;
   padding: 0;
@@ -8,21 +10,50 @@ body{
   background-color: #333;
   color: antiquewhite;
   overflow-Y: hidden;
+  font-family: 'Varela Round', sans-serif;
 }
+  
+.background-img::before {
+  
+  content: '';
+  position: fixed;
+  background-image: url(/scary-img.jpg);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+} 
+  
+
+
 
 .first-page {
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  
 }
 .first-page .intro{
-  max-width: 700px;
+  width: 100%;
   margin: 15vh auto 0 auto;
-  font-size: 22px;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
 }
 .first-page .intro_header{
-  margin-bottom: 30px;
+  margin-bottom: 122px;
+  font-family: 'Dinobots', sans-serif;
+  width: 100%;
+  text-align: center;
+  
 }
 
 .first-page .startBtn{
@@ -31,16 +62,24 @@ body{
   text-align: center;
 }
 .first-page button{
+  font-family: 'Dinobots', sans-serif;
   padding: 7px 12px;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 40px;
+  font-size: 28px;
   font-weight: 600;
-  background-color: black;
+  background-color: rgba(0,0,0,0.5);
   color: white;
+  transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
+  cursor: pointer;
+
+  
 }
 
 .first-page button:hover{
   background-color: rgb(59, 57, 57);
+  transform: scale(1.2);
+  box-shadow: 0 0 40px 40px black inset;
+  
 }
 
 .page-two{
@@ -55,15 +94,17 @@ body{
 
 .quizzForm {
   font-size: 23px;
-  border: 2px solid pink;
+  /* border: 2px solid whitesmoke; */
   padding: 20px;
   margin:15vh auto;
-  max-width: 700px;
+  max-width: 750px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap:10px;
+  background-color: rgba(0,0,0,0.4);
+  
 }
 
 .question{
@@ -79,8 +120,23 @@ body{
 #resultBtn, #nextBtn{
   padding: 2px 15px;
   font-size: 18px;
-  border-radius: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: antiquewhite;
+  background-color: rgba(0,0,0,0.5);
+  
+  transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
+
+  
 }
+
+#nextBtn:hover{
+  background-color: rgb(59, 57, 57);
+  transform: scale(1.2);
+  box-shadow: 0 0 40px 40px black inset;
+  color: #fefefe;
+}
+
 .disabled{
   display:none;
 }
@@ -92,8 +148,9 @@ body{
 .resultContainer{
   border: 2px solid pink;
   padding: 20px;
-  margin:20vh auto;
+  margin:8vh auto;
   max-width: 600px;
+  color: #333;
 }
 
 .resultContainer h3{
@@ -104,7 +161,7 @@ body{
 }
 
 .resultContainer p{
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .resultContainer .img img {
@@ -123,7 +180,20 @@ body{
   font-size: 18px;
   border-radius: 10px;
   background-color: black;
-  color: white;
+  color: antiquewhite;
+  cursor: pointer;
+
+  background-color: rgba(0,0,0,0.5);
+  
+  transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
+
+  
+}
+
+.leaderboardBtn:hover{
+  background-color: rgb(59, 57, 57);
+  transform: scale(1.2);
+  box-shadow: 0 0 40px 40px black inset;
 }
 .modalBackground {
   display: none; /* Hidden by default */
