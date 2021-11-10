@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +11,24 @@
 
     <title>Quizz</title>
 </head>
-<body>
-
+<body class="background-img">
+    
     <section class="first-page">
         <div class="intro">
-            <h3 class="intro_header">Could you be a serial killer? Find out by answering a few questions.</h3>
-            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam exercitationem possimus aliquid at illum aliquam, magni alias. Ducimus sequi quae quibusdam sunt ad saepe deserunt maxime modi, doloremque iusto nam ipsum, consectetur molestiae mollitia asperiores minima cumque velit eius. Sed laborum voluptates voluptatum nihil nesciunt quia doloremque rerum. Veritatis, sint!
-            </p> -->
-        </div>
-        <div class="startBtn">
-            <button> Press me</button>
+            <h3 class="intro_header">Could you be a serial killer? <br><br>
+                Find out by answering a few questions.</h3>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam exercitationem possimus aliquid at illum aliquam, magni alias. Ducimus sequi quae quibusdam sunt ad saepe deserunt maxime modi, doloremque iusto nam ipsum, consectetur molestiae mollitia asperiores minima cumque velit eius. Sed laborum voluptates voluptatum nihil nesciunt quia doloremque rerum. Veritatis, sint!
+                </p> -->
+                
+            </div>
+            <div class="startBtn">
+            <audio id="myAudio1" src="/mp3/horror-creepy-noises/horror-creepy-noises.mp3" ></audio>
+            <button > Press me</button>
         </div>
     </section>
-
+    
     <section class="page-two">
+        
         <!-- modal btn that triggers leaderboard modal -->
         <button class="leaderboardBtn">Score leaderboard</button>
         <!-- leaderboard modal -->
@@ -79,12 +84,17 @@
             
             <div class="controlBtns">
                 <div class="inputName disabled">
+                    
+                    <audio id="myAudio" src="./mp3/Loud_Bang.mp3"></audio>
                     <label for="name">Enter your name:</label>
                     <input type="text" id="name" name="name" required minlength="4" maxlength="12" size="18">
                 </div>
-    
                 <input type="submit" value="Show Results" id="resultBtn" class="disabled">
-                <input type="submit" value="Next" id="nextBtn" class="bloody-click" >
+                <!-- <input type="submit" value="Next" id="nextBtn" class="bloody-click" > -->
+                
+                <!-- <input type="submit" value="Show Results" id="resultBtn" class="disabled"> -->
+            <input type="submit" value="Next" id="nextBtn" class="bloody-click" >
+            <audio id="myAudio" src="./mp3/Loud_Bang.mp3"></audio>
             </div>
             
         </form>
