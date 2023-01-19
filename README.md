@@ -1,3 +1,4 @@
 # killer-quiz
-Killer Quiz. Project #2 for module If This Than That on Hyper Island - FED23
+Killer Quiz. Project #2 for Hyper Island - FED23
 
+https://richikennedy.github.io/killer-quiz/
